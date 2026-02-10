@@ -24,7 +24,7 @@ class PourRichHomeSee extends GetView<PourRichEndLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.tmkxzdhj.value)),
+              url: WebUri.uri(Uri.parse(controller.fzuebpg.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

@@ -11,7 +11,7 @@ class PourRichEndView extends GetView<PourRichEndLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.bejrlqwm.value
+          () => controller.phstyme.value
               ? const CircularProgressIndicator(color: Colors.blueAccent)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class PourRichEndView extends GetView<PourRichEndLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.xifkz();
+              controller.nwbz();
             },
             icon: const Icon(
               Icons.restart_alt,

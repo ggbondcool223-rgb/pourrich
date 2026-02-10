@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pour_rich/pages/pour_rich_end/pour_rich_end_binding.dart';
+import 'package:pour_rich/pages/pour_rich_end/pour_rich_end_view.dart';
+import 'package:pour_rich/pages/pour_rich_home/pour_rich_home_see.dart';
 import 'package:pour_rich/pages/pour_rich_tab/pour_rich_tab_view.dart';
 import 'package:pour_rich/pages/pour_rich_tab/pour_rich_tab_binding.dart';
 import 'package:pour_rich/pages/pour_rich_daily_tasks/pour_rich_daily_tasks_view.dart';
@@ -44,7 +47,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: Gem,
-          initialRoute: '/pour_tab',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: PourRichColors.primary,
@@ -111,6 +114,11 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Gem = [
   GetPage(
+    name: '/',
+    page: () => const PourRichEndView(),
+    binding: PourRichEndBinding(),
+  ),
+  GetPage(
     name: '/pour_tab',
     page: () => const PourRichTabView(),
     binding: PourRichTabBinding(),
@@ -124,6 +132,10 @@ List<GetPage<dynamic>> Gem = [
     name: '/savings',
     page: () => const PourRichSavingsView(),
     binding: PourRichSavingsBinding(),
+  ),
+  GetPage(
+    name: '/home_see',
+    page: () => const PourRichHomeSee(),
   ),
   GetPage(
     name: '/quiz',
